@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:metronome/appbar.dart';
 import 'package:metronome/metronome_page.dart';
 import 'package:metronome/playButton.dart';
 void main(){
@@ -24,18 +25,7 @@ class App extends StatelessWidget {
           ),
           floatingActionButton: PlayButton(),
           floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-          bottomNavigationBar: BottomAppBar(
-            shape: CircularNotchedRectangle(),
-            color: Color(0xff344359),
-            notchMargin: 5.0,
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                IconButton(icon: Icon(Icons.menu), onPressed: (){}),
-              ],
-            ),
-          ),
+          bottomNavigationBar: MetronomeAppBar(),
         ),
       );
   }
